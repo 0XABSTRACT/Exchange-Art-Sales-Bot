@@ -5,7 +5,7 @@ let { Client, Intents } = require('discord.js');
 require('dotenv').config();
 
 // 1000 * 60 * 60 is one hour
-const sleep_time = 1000*60*30
+const sleep_time = 1000*60*30 // sleep 30 min
 
 const twitter = true
 const discord = true

@@ -50,7 +50,7 @@ DISCORD_CHANNEL_ID
 ### Create a new hidden file called Exchange-Art-Sales-Bot/.env
 
 This new .env file will follow the same format and contain the same variables as the tempenv file. However, it will contain all of your unique constants, API keys, and tokens for request access that were assigned to our developer accounts at Discord and Twitter.
-
+\
 The .env file also contains a link to the Exchange.art NFT collection url. Set the line containing COLLECTION_URL to the collection's url you wish to track.
 
 
@@ -75,7 +75,7 @@ Initialize an application using your Twitter developer portal. You'll need acces
 
 ![alt text](readme_images/rw_twitter_permission.png "RW Twitter Permissions")
 
-Finally we'll access the Keys & Tokens tab for our App via the Twitter developer portal and update our .env file to contain our unique keys & tokens.
+Finally we'll access the Keys & Tokens tab for our App via the Twitter developer portal and update our .env file to contain our uniquely assigned keys & tokens.
 
 ![alt text](readme_images/twitter_keys_and_tokens.png "Twitter keys and tokens")
 
@@ -128,7 +128,10 @@ We can get the DISCORD_CHANNEL_ID by right clicking the channel and selecting 'C
 
 ![alt text](readme_images/discord_channel_id.png "Discord get bot token")
 
+Ensure that the bot has permission to view and send messages in this channel.
+
 ## Execution
+In order to run the program, invoke $ node x.js
 ```console
 node x.js
 ```
