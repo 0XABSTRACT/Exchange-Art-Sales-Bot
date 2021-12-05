@@ -136,6 +136,20 @@ In order to run the program, invoke $ node x.js
 node x.js
 ```
 
+## Flags
+```js script
+// determines whether to tweet
+const twitter = true
+
+// determines whether to post discord message, default true
+const discord = true
+
+// determins whether to launch a GUI chromium instance
+// if false then launch gui
+const headless = false
+
+```
+
 ### Buy me coffee
 
 Did you find this guide helpful? Buy me a coffee or send me an NFT
