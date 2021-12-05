@@ -49,7 +49,7 @@ DISCORD_CHANNEL_ID
 
 ### Create a new hidden file called Exchange-Art-Sales-Bot/.env
 
-This new .env file will follow the same format as the tempenv file but it will contain all of your unique constants, API keys, and tokens for request access.
+This new .env file will follow the same format and contain the same variables as the tempenv file. However, it will contain all of your unique constants, API keys, and tokens for request access that were assigned to our developer accounts at Discord and Twitter.
 
 The .env file also contains a link to the Exchange.art NFT collection url. Set the line containing COLLECTION_URL to the collection's url you wish to track.
 
