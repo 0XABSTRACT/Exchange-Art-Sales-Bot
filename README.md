@@ -100,3 +100,6 @@ Next we need to update the .env file to reflect our uniquely assigned DISCORD_TO
 DISCORD_TOKEN=YOUR_DISCORD_TOKEN
 DISCORD_CHANNEL_ID=YOUR_DISCORD_CHANNEL_ID
 ```
+
+We can get the DISCORD_TOKEN from the bot tab via Discord Developer Portal
+![alt text](readme_images/readme_images/discord_token.png "Discored get bot token")
