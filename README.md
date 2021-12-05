@@ -14,6 +14,31 @@ cd Exchange-Art-Sales-Bot/
 npm install
 ```
 
+## Create a .env file to hold onto Twitter/Discord API access keys
+Take a look at the Exchange-Art-Sales-Bot/tempenv text file, it looks like this :
+
+```text
+COLLECTION_URL=YOUR_COLLECTION_URL
+TWITTER_API_KEY=YOUR_API_KEY
+TWITTER_API_KEY_SECRET=YOUR_API_KEY_SECRET
+TWITTER_ACCESS_TOKEN=YOUR_ACCESS_TOKEN
+TWITTER_ACCESS_TOKEN_SECRET=YOUR_ACCESS_TOKEN_SECRET
+DISCORD_TOKEN=YOUR_DISCORD_TOKEN
+DISCORD_CHANNEL_ID=YOUR_DISCORD_CHANNEL_ID
+```
+
+Create a new hidden file called Exchange-Art-Sales-Bot/.env
+
+This new .env file will follow the same format as the tempenv file but it will contain all of your API keys and tokens for request access.
+
+The .env file also contains a link to the Exchange.art NFT collection url. Set the line containing COLLECTION_URL you can set equal to the collection you wish to track
+
+
+```text
+COLLECTION_URL=https://exchange.art/collections/GAIKOTSU%20DEMONS
+...
+```
+
 ## Setup Twitter API
 In order to access the Twitter API you'll have to register for a developer account. You can do this at
 
