@@ -4,8 +4,8 @@
 Ensure that you have the correct versions of node, twitter and discord
 ```console
 node -v
+# v16.13.1
 ```
-should return v16.13.1
 
 
 ```console
