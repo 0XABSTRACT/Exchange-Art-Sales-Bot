@@ -239,7 +239,7 @@ let main = async () => {
         // tweet here
         if (twitter) {
           console.log('attempting to post to twitter')
-          await twitterClient.v1.tweet(list_of_new_sales[i]);
+          await twitterClient.v1.tweet(list_of_new_sales[i].stringify());
         }
 
         // post to discord
@@ -253,7 +253,7 @@ let main = async () => {
           discord_client.once('ready', () => {
             console.log('attempting to post to discord')
             channel = discord_client.channels.cache.get(process.env.DISCORD_CHANNEL_ID.toString());
-            channel.send(list_of_new_sales[i]);
+            channel.send(list_of_new_sales[i].stringify());
           });
         }
         await sleep(5000) // sleep 5 seconds between posts
