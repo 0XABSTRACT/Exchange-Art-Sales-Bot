@@ -82,3 +82,21 @@ Next you're going to have to create a Discord bot via the Developer Portal
 
 [https://discordpy.readthedocs.io/en/stable/discord.html](https://discordpy.readthedocs.io/en/stable/discord.html)
 ![alt text](readme_images/discord_create_bot.png "Discored create bot")
+
+We have to invite the bot to the server in which we wish to post, to do this you'll have to build the invitation URL using your Discord app's client_id and the proper permissions. This bot needs permission to post messages to a specified channel so we'll need permission 2048
+
+[https://discordjs.guide/preparations/adding-your-bot-to-servers.html#bot-invite-links](https://discordjs.guide/preparations/adding-your-bot-to-servers.html#bot-invite-links)
+
+The server invitation link for your bot looks something like this :
+
+```text
+https://discord.com/api/oauth2/authorize?client_id=MY_CLIENT_ID&&permissions=2048&scope=bot%20applications.commands
+```
+
+Next we need to update the .env file to reflect our uniquely assigned DISCORD_TOKEN and the particular DISCORD_CHANNEL_ID to specify which channel the bot will post recent sales data into.
+
+
+```text
+DISCORD_TOKEN=YOUR_DISCORD_TOKEN
+DISCORD_CHANNEL_ID=YOUR_DISCORD_CHANNEL_ID
+```
