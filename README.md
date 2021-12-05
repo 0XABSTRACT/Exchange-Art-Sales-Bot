@@ -7,7 +7,7 @@ node -v
 # v16.13.1
 ```
 
-
+Clone the repository and install the dependencies via NPM
 ```console
 git clone https://github.com/0XABSTRACT/Exchange-Art-Sales-Bot
 cd Exchange-Art-Sales-Bot/
