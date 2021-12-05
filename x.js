@@ -30,6 +30,8 @@ if (discord) {
 let multi_post_discord_twitter = async (message) => {
   return new Promise(async (resolve, reject) => {
 
+    // console.log(message)
+    // console.log(JSON.stringify(message))
     await twitterClient.v1.tweet(message);
 
     discord_client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -239,7 +241,7 @@ let main = async () => {
         // tweet here
         if (twitter) {
           console.log('attempting to post to twitter')
-          await twitterClient.v1.tweet(list_of_new_sales[i].stringify());
+          await twitterClient.v1.tweet(JSON.stringify(list_of_new_sales[i].stringify()));
         }
 
         // post to discord
@@ -253,7 +255,7 @@ let main = async () => {
           discord_client.once('ready', () => {
             console.log('attempting to post to discord')
             channel = discord_client.channels.cache.get(process.env.DISCORD_CHANNEL_ID.toString());
-            channel.send(list_of_new_sales[i].stringify());
+            channel.send(JSON.stringify(list_of_new_sales[i]));
           });
         }
         await sleep(5000) // sleep 5 seconds between posts
