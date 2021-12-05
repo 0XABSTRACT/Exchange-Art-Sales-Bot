@@ -7,8 +7,13 @@ require('dotenv').config();
 // 1000 * 60 * 60 is one hour
 const sleep_time = 1000*60*30 // sleep 30 min
 
+// flags for whether to post to twitter/discord
 const twitter = true
 const discord = true
+
+// headless determines whether to open a GUI chromium window
+// false opens gui
+// true runs "silently"
 const headless = false
 
 let twitterClient
