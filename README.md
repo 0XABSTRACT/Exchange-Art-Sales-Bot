@@ -19,9 +19,11 @@ In order to access the Twitter API you'll have to register for a developer accou
 
 [https://developer.twitter.com/en/docs/developer-portal/overview](https://developer.twitter.com/en/docs/developer-portal/overview)
 
-You'll need access to the v1 Twitter API, you can apply for access via the developer portal
+You'll need access to the v1 Twitter API, you can apply for elevated access via the developer portal
 
 [https://developer.twitter.com/en/portal/dashboard](https://developer.twitter.com/en/portal/dashboard)
+
+![alt text](readme_images/twitter_elevated_access.png "Elevated Access")
 
 Initialize an application using your Twitter developer portal. You'll need Read and Write access for your application via your Twitter Dev Portal
 
