@@ -9,6 +9,7 @@ const sleep_time = 1000*60*30 // sleep 30 min
 
 const twitter = true
 const discord = true
+const headless = false
 
 let twitterClient
 if (twitter) {
@@ -30,8 +31,6 @@ if (discord) {
 let multi_post_discord_twitter = async (message) => {
   return new Promise(async (resolve, reject) => {
 
-    // console.log(message)
-    // console.log(JSON.stringify(message))
     await twitterClient.v1.tweet(message);
 
     discord_client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -214,15 +213,14 @@ let main = async () => {
   let collection_url = process.env.COLLECTION_URL
 
   // init browser
-  const browser = await puppeteer.launch({headless: false});
+  const browser = await puppeteer.launch({headless: headless});
   // init page
   const page = await browser.newPage();
 
   // get recent sales data for collection
   let recent_data = await get_recent_sale_data_for_collection(collection_url, page, browser)
 
-  // let init_sale_data = await get_recent_sale_data_for_collection(collection_url, page, browser)
-  console.log('initial sleeping for a bit\n')
+  console.log('initially sleeping for a bit\n')
   await sleep(3000) // sleep for a 3 seconds
   while (true) {
     console.log('woke up, checking if new sale exists...')
@@ -241,7 +239,11 @@ let main = async () => {
         // tweet here
         if (twitter) {
           console.log('attempting to post to twitter')
-          await twitterClient.v1.tweet(JSON.stringify(list_of_new_sales[i].stringify()));
+          try {
+            await twitterClient.v1.tweet(JSON.stringify(list_of_new_sales[i].stringify()));
+          } catch (e) {
+            console.log(e)
+          }
         }
 
         // post to discord
@@ -254,11 +256,14 @@ let main = async () => {
           // once client is ready to post...
           discord_client.once('ready', () => {
             console.log('attempting to post to discord')
-            channel = discord_client.channels.cache.get(process.env.DISCORD_CHANNEL_ID.toString());
-            channel.send(JSON.stringify(list_of_new_sales[i]));
+            try {
+              channel = discord_client.channels.cache.get(process.env.DISCORD_CHANNEL_ID.toString());
+              channel.send(JSON.stringify(list_of_new_sales[i]));
+            } catch (e) {
+              console.log(e)
+            }
           });
         }
-        await sleep(5000) // sleep 5 seconds between posts
       }
       recent_data = await get_recent_sale_data_for_collection(collection_url, page, browser)
     } else {
