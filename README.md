@@ -145,6 +145,7 @@ const twitter = true
 const discord = true
 
 // determins whether to launch a GUI chromium instance
+
 // if false then launch gui
 const headless = false
 
