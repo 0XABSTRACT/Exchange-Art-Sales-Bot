@@ -33,13 +33,19 @@ COLLECTION_URL
 
 ### Required for Tweets
 TWITTER_API_KEY
+
 TWITTER_API_KEY_SECRET
+
 TWITTER_ACCESS_TOKEN
+
 TWITTER_ACCESS_TOKEN_SECRET
+
 
 ### Required for Discord Messages
 DISCORD_TOKEN
+
 DISCORD_CHANNEL_ID
+
 
 ### Create a new hidden file called Exchange-Art-Sales-Bot/.env
 
