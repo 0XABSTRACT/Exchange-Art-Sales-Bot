@@ -28,14 +28,18 @@ DISCORD_TOKEN=YOUR_DISCORD_TOKEN
 DISCORD_CHANNEL_ID=YOUR_DISCORD_CHANNEL_ID
 ```
 
-Our goal is to provide the values for each of the 7 variables.
-1. COLLECTION_URL               // core dependency
-2. TWITTER_API_KEY              // required for Twitter
-3. TWITTER_API_KEY_SECRET       // required for Twitter
-4. TWITTER_ACCESS_TOKEN         // required for Twitter
-5. TWITTER_ACCESS_TOKEN_SECRET  // required for Twitter
-6. DISCORD_TOKEN                // required for Discord
-7. DISCORD_CHANNEL_ID           // required for Discord
+### Required
+COLLECTION_URL
+
+### Required for Tweets
+TWITTER_API_KEY
+TWITTER_API_KEY_SECRET
+TWITTER_ACCESS_TOKEN
+TWITTER_ACCESS_TOKEN_SECRET
+
+### Required for Discord Messages
+DISCORD_TOKEN
+DISCORD_CHANNEL_ID
 
 ### Create a new hidden file called Exchange-Art-Sales-Bot/.env
 
