@@ -1,5 +1,5 @@
 # Exchange.art Sales Bot
-This is a sales bot which tracks sales for a given NFT collection on [exchange.art](https://exchange.art/). This bot has Twitter and/or Discord api integration. It can be configured to Tweet recent sales data and/or post the data to a specified Discord channel.
+This is a sales bot which tracks sales for a given NFT collection on [exchange.art](https://exchange.art/). This bot has Twitter and/or Discord API integration. It can be configured to Tweet recent sales data and/or post the data to a specified Discord channel.
 
 ## Initial Setup & Install
 Ensure that you have the correct versions of node
@@ -61,6 +61,7 @@ Finally we'll access the Keys & Tokens tab for our App via the Twitter developer
 ![alt text](readme_images/twitter_keys_and_tokens.png "Twitter keys and tokens")
 
 And update the .env file to contain our unique keys and tokens
+
 ```text
 ...
 TWITTER_API_KEY=YOUR_API_KEY
@@ -69,3 +70,15 @@ TWITTER_ACCESS_TOKEN=YOUR_ACCESS_TOKEN
 TWITTER_ACCESS_TOKEN_SECRET=YOUR_ACCESS_TOKEN_SECRET
 ...
 ```
+
+
+## Setup Discord API
+
+Start by registering as a Discord developer and initializing an App via the Discord Developer Portal
+
+[https://discord.com/developers/docs/intro](https://discord.com/developers/docs/intro)
+
+Next you're going to have to create a Discord bot via the Developer Portal
+
+[https://discordpy.readthedocs.io/en/stable/discord.html](https://discordpy.readthedocs.io/en/stable/discord.html)
+![alt text](readme_images/discord_create_bot.png "Discored create bot")
