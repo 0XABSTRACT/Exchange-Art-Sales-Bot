@@ -14,7 +14,7 @@ cd Exchange-Art-Sales-Bot/
 npm install
 ```
 
-## Create a .env file to hold onto Twitter/Discord API access keys
+## Create a .env file to hold onto constants & Twitter/Discord API access keys
 Take a look at the Exchange-Art-Sales-Bot/tempenv text file, it looks like this :
 
 ```text
@@ -40,6 +40,7 @@ COLLECTION_URL=https://exchange.art/collections/GAIKOTSU%20DEMONS
 ```
 
 ## Setup Twitter API
+### We need to setup a developer account and proper permissions to get our TWITTER_API_KEY, TWITTER_API_KEY_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET, and to send requests
 In order to access the Twitter API you'll have to register for a developer account. You can do this at
 
 [https://developer.twitter.com/en/docs/developer-portal/overview](https://developer.twitter.com/en/docs/developer-portal/overview)
