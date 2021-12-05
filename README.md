@@ -28,7 +28,7 @@ DISCORD_TOKEN=YOUR_DISCORD_TOKEN
 DISCORD_CHANNEL_ID=YOUR_DISCORD_CHANNEL_ID
 ```
 
-Create a new hidden file called Exchange-Art-Sales-Bot/.env
+### Create a new hidden file called Exchange-Art-Sales-Bot/.env
 
 This new .env file will follow the same format as the tempenv file but it will contain all of your unique constants, API keys, and tokens for request access.
 
@@ -55,3 +55,17 @@ Initialize an application using your Twitter developer portal. You'll need acces
  You'll need Read and Write access for your application via your Twitter Dev Portal
 
 ![alt text](readme_images/rw_twitter_permission.png "RW Twitter Permissions")
+
+Finally we'll access the Keys & Tokens tab for our App via the Twitter developer portal and update our .env file to contain our unique keys & tokens.
+
+![alt text](readme_images/twitter_keys_and_tokens.png "Twitter keys and tokens")
+
+And update the .env file to contain our unique keys and tokens
+```text
+...
+TWITTER_API_KEY=YOUR_API_KEY
+TWITTER_API_KEY_SECRET=YOUR_API_KEY_SECRET
+TWITTER_ACCESS_TOKEN=YOUR_ACCESS_TOKEN
+TWITTER_ACCESS_TOKEN_SECRET=YOUR_ACCESS_TOKEN_SECRET
+...
+```
