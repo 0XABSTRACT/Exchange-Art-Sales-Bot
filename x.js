@@ -5,7 +5,7 @@ let { Client, Intents } = require('discord.js');
 require('dotenv').config();
 
 // 1000 * 60 * 60 is one hour
-const sleep_time = 1000*60*30 // sleep 30 min
+const sleep_time = 1000*60*10 // sleep 10 min
 
 // flags for whether to post to twitter/discord
 const twitter = true
@@ -245,7 +245,7 @@ let main = async () => {
         if (twitter) {
           console.log('attempting to post to twitter')
           try {
-            await twitterClient.v1.tweet(JSON.stringify(list_of_new_sales[i].stringify()));
+            await twitterClient.v1.tweet(JSON.stringify(list_of_new_sales[i]));
           } catch (e) {
             console.log(e)
           }
