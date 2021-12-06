@@ -138,14 +138,14 @@ node x.js
 
 ## Flags
 ```js script
-// determines whether to tweet
+// determines whether to tweet, default true
 const twitter = true
 
 // determines whether to post discord message, default true
 const discord = true
 
 // determines whether to launch a GUI chromium instance
-// if false then launch gui
+// if false then launch gui, default
 const headless = false
 
 ```
