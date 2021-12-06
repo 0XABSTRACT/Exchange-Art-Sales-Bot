@@ -269,6 +269,7 @@ let main = async () => {
             }
           });
         }
+        await sleep(1000)
       }
       recent_data = await get_recent_sale_data_for_collection(collection_url, page, browser)
     } else {

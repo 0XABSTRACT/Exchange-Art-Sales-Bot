@@ -1,6 +1,8 @@
 # Exchange.art Sales Bot
 This is a sales bot which tracks sales for a given NFT collection on [exchange.art](https://exchange.art/). This bot has Twitter and/or Discord API integration. It can be configured to Tweet recent sales data and/or post the data to a specified Discord channel.
 
+![alt text](readme_images/proof.png "proof")
+
 ## Initial Setup & Install
 Ensure that you have the correct versions of node
 ```console
